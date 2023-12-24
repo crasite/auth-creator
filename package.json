@@ -1,0 +1,17 @@
+{
+  "name": "authCreator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install-playwright": "playwright install",
+    "clear-auth": "rm -rf auth/auth.json && echo '{}' > auth/auth.json",
+    "create-auth": "pnpm exec playwright codegen ${1} --save-storage=auth/auth.json --load-storage=auth/auth.json --device='iPhone 13'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "playwright": "^1.40.1"
+  }
+}
