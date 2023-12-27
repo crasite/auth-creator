@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "install-playwright": "playwright install",
-    "clear-auth": "rm -rf auth/auth.json && echo '{}' > auth/auth.json",
+    "clear-auth": "del auth\\auth.json && echo {} > auth\\auth.json",
+    "clear-auth-unix": "rm -rf auth/auth.json && echo '{}' > auth/auth.json",
     "create-auth": "pnpm exec playwright codegen ${1} --save-storage=auth/auth.json --load-storage=auth/auth.json --device='iPhone 13'"
   },
   "keywords": [],
